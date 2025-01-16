@@ -1,0 +1,20 @@
+{
+    "name": "C Development Environment",
+    "image": "gcc:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "xaver.clang-format",
+            ]
+        }
+    },
+    "settings": {
+        "editor.formatOnSave": true,
+        "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+        "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+        "C_Cpp.default.cStandard": "c17"
+    },
+    "postCreateCommand": "apt-get update && apt-get install -y make cmake gdb clang"
+}
